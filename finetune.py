@@ -21,9 +21,6 @@ from peft import (
     set_peft_model_state_dict,
 )
 from transformers import LlamaForCausalLM, LlamaTokenizer, AutoTokenizer
-from transformers import BitsAndBytesConfig
-# Create a BitsAndBytesConfig object
-bits_and_bytes_config = BitsAndBytesConfig()
 
 from utils.prompter import Prompter
 
