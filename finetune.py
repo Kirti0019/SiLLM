@@ -21,6 +21,9 @@ from peft import (
     set_peft_model_state_dict,
 )
 from transformers import LlamaForCausalLM, LlamaTokenizer, AutoTokenizer
+from transformers import BitsAndBytesConfig
+# Create a BitsAndBytesConfig object
+bits_and_bytes_config = BitsAndBytesConfig()
 
 from utils.prompter import Prompter
 
@@ -171,7 +174,7 @@ def train(
             ]  # could be sped up, probably
         return tokenized_full_prompt
 
-    model = prepare_model_for_kbit_training(model)
+    model = prepare_model_for_kbit_training(model, quantization_config=bits_and_bytes_config)
 
     config = LoraConfig(
         r=lora_r,
