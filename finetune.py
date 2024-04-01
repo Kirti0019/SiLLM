@@ -174,13 +174,13 @@ def train(
     model = prepare_model_for_kbit_training(model)
 
     config = LoraConfig(
-        r=lora_r,
-        lora_alpha=lora_alpha,
-        target_modules=lora_target_modules,
-        lora_dropout=lora_dropout,
-        bias="none",
-        task_type="CAUSAL_LM",
-    )
+    r=lora_r,
+    lora_alpha=lora_alpha,
+    target_modules=lora_target_modules,
+    lora_dropout=lora_dropout,
+    bias="none",
+    task_type="CAUSAL_LM",
+)
     model = get_peft_model(model, config)
 
     if data_path.endswith(".json") or data_path.endswith(".jsonl"):
