@@ -6,7 +6,7 @@ import fire
 import torch
 import transformers
 from datasets import load_dataset
-from peft_module import PeftModel
+
 
 
 """
