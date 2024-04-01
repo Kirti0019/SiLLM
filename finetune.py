@@ -28,7 +28,7 @@ from utils.prompter import Prompter
 def train(
     # model/data params
     base_model: str = "",  # the only required argument
-    data_path: str = "huggingface/datasets/sst2",
+    data_path: str = "SFT_data",
     output_dir: str = "./lora-alpaca",
     # training hyperparams
     batch_size: int = 128,
