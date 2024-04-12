@@ -15,13 +15,7 @@ import torch.nn as nn
 import bitsandbytes as bnb
 """
 
-from peft import (
-    LoraConfig,
-    get_peft_model,
-    get_peft_model_state_dict,
-    prepare_model_for_kbit_training,
-    set_peft_model_state_dict,
-)
+from peft import LoraConfig, get_peft_model, get_peft_model_state_dict, prepare_model_for_kbit_training, set_peft_model_state_dict
 from transformers import LlamaForCausalLM, LlamaTokenizer, AutoTokenizer
 
 from utils.prompter import Prompter
