@@ -36,11 +36,15 @@ jupyterlab==3.6.0
 dask==2024.3.1
 pandas>=2.0.0
 protobuf==3.12.2
+fsspec==2023.12.2
+multiprocess==0.70.16
 
 # Downgrade conflicting packages
 apache-beam==2.45.0  # Downgrading to a version that doesn't conflict with current numpy and protobuf versions
 
 # Remove conflicting packages
-# Remove cudf, cubinlinker, ptxcompiler, cuda-python since they are not installed and causing conflicts
+# Remove cubinlinker, ptxcompiler, cuda-python since they are not installed and causing conflicts
 
+# Remove pathos since it requires newer versions of dill and multiprocess than what is specified
 # Remove tensorflow-transform since it requires protobuf<4,>=3.7 which conflicts with the specified protobuf version
+
