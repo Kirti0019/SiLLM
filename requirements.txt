@@ -16,3 +16,15 @@ protobuf<5,>=4.21
 pyarrow==11.*
 dask==2023.7.1
 fsspec==2024.3.0
+apache-beam==2.34.4
+jupyterlab==3.6.0
+jupyter-lsp==2.0.0
+cudf==11.7.1
+dask==2024.3.1
+pandas==2.0.0
+google-cloud-aiplatform==1.22.2
+google-cloud-storage==2.2.1
+protobuf==3.13.0
+shapely==1.8.5
+tensorflow==2.15.0
+keras==2.15.0
