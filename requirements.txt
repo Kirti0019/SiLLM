@@ -28,3 +28,19 @@ protobuf==3.13.0
 shapely==1.8.5
 tensorflow==2.15.0
 keras==2.15.0
+# Upgrade conflicting packages
+dill==0.3.8
+numpy==1.25.0
+pyarrow==10.0.0
+jupyterlab==3.6.0
+dask==2024.3.1
+pandas>=2.0.0
+protobuf==3.12.2
+
+# Downgrade conflicting packages
+apache-beam==2.45.0  # Downgrading to a version that doesn't conflict with current numpy and protobuf versions
+
+# Remove conflicting packages
+# Remove cudf, cubinlinker, ptxcompiler, cuda-python since they are not installed and causing conflicts
+
+# Remove tensorflow-transform since it requires protobuf<4,>=3.7 which conflicts with the specified protobuf version
