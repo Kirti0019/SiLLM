@@ -10,3 +10,4 @@ git+https://github.com/huggingface/peft.git
 transformers>=4.28.0
 sentencepiece
 gradio
+apache-beam==2.34.0
